@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
-}
+/*MEDIA QUERY GUIDE
+   0 - 600px: Phone  1em = 16px: 600/16: 37.5em
+   600 - 900px: Tablet Portrait  1em = 16px: 600/16: 56.25em
+   900 - 1200px: Tablet Landscape   1em = 16px: 1200/16: 75em
+   1200 - 1800px: Desktop
+   1800px+: 1em = Big Desktop 16px: 1800/16: 112.5em
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+body {
+  padding: 0 3rem;
+  box-sizing: border-box; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+body {
+  font-size: 16px;
+  color: #1f2f25;
+  font-family: 'Lato', sans-serif; }
