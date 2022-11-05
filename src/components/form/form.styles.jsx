@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.form`
-   padding: 6rem 9.5rem;
-   margin-bottom: 2rem;
+   padding: 10rem 39.5rem;
    border-bottom: 1px solid #e6e5e5;
 `
 
@@ -17,9 +16,10 @@ export const FormSummary = styled.p`
    font-size: 1.3rem;
    text-align: left;
    color: #475467;
+   margin-bottom: 1rem;
 `
 
-export const InputNameContainer = styled.div`
+export const InputNamesContainer = styled.div`
    display: flex;
    flex-direction: row;
    width: 100%;
@@ -27,12 +27,19 @@ export const InputNameContainer = styled.div`
    margin-top: .5rem;
 `
 
-export const Input = styled.div`
+export const InputContainer = styled.div`
    display: flex;
    flex-direction: column;
    width: 100%;
    height: fit-content;
    margin: 1rem 0;
+`
+
+export const FormLabel = styled.label`
+   text-align: left;
+   font-size: 1rem;
+   font-weight: 700;
+   margin-bottom: 1rem;
 `
    
 export const InputData = styled.input`
@@ -41,6 +48,10 @@ export const InputData = styled.input`
    padding: .5rem;
    border: 1px solid #e6e5e5;
    outline: none;
+
+   &::placeholder {
+      color: #c2c0c0;
+   }
 `
 
 export const InputMessage = styled.textarea`
@@ -48,10 +59,24 @@ export const InputMessage = styled.textarea`
    padding: 1rem;
    border: 1px solid #e6e5e5;
    outline: none;
+
+   &::placeholder {
+      color: #c2c0c0;
+   }
+`
+
+export const InputRadioContainer = styled(InputNamesContainer)`
+   align-items: center;
+   justify-content: flex-start;
+   margin: 1rem auto;
 `
 
 export const InputRadio = styled.input`
    left: 0;
+`
+export const FormRadioLabel = styled(FormLabel)`
+   margin-bottom: 0;
+   font-weight: 500;
 `
 
 export const ButtonSubmit = styled.button`
@@ -60,10 +85,11 @@ export const ButtonSubmit = styled.button`
    border: none;
    border-radius: .5rem;
    background-color: #1570EF;
+   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
    color: #fff;
-`
+   cursor: pointer;
 
-export const FormLabel = styled.label`
-   font-size: 1rem;
-   margin-bottom: 1rem;
+   &:hover {
+      background-color: #0a418f;
+   }
 `

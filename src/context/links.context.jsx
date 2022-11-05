@@ -33,6 +33,11 @@ const data = [
       linkName: "Design Books",
       link: "https://books.zuri.team/design-rules",
    },
+   {
+      id: 6,
+      linkName: "Contact Me",
+      link: "/contact",
+   },
 ]
 
 export const LinksContext = createContext({

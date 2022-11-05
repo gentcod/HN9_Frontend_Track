@@ -1,4 +1,4 @@
-import {FormContainer, FormHeader, FormSummary, InputNameContainer, Input, InputData, InputMessage, FormLabel, InputRadio, ButtonSubmit} from './form.styles';
+import {FormContainer, FormHeader, FormSummary, InputNamesContainer, InputContainer, InputData, InputMessage, FormLabel, FormRadioLabel, InputRadioContainer, InputRadio, ButtonSubmit} from './form.styles';
 
 //Form data to avoid hardcoding and for easy maintenance
 
@@ -32,27 +32,28 @@ const Form = () => {
       <FormContainer>
          <FormHeader>{formData.header}</FormHeader>
          <FormSummary>{formData.summary}</FormSummary>
-         <InputNameContainer>
-            <Input>
-               <FormLabel placeholder={formData.firstName.label}/>
-               <InputData placeholder={formData.firstName.placeholder} />
-            </Input>
-            <Input>
-               <FormLabel placeholder={formData.lastName.label}/>
-               <InputData placeholder={formData.lastName.placeholder} />
-            </Input>
-         </InputNameContainer>
-         <Input>
-            <FormLabel placeholder={formData.email.label}/>
-            <InputData placeholder={formData.email.placeholder} type='email'/>
-         </Input>
-         <Input>
-            <FormLabel placeholder={formData.message.label}/>
-            <InputMessage placeholder={formData.message.placeholder}/>
-         </Input>
-         <Input>
-            <InputRadio type='radio'/>
-         </Input>
+         <InputNamesContainer>
+            <InputContainer>
+               <FormLabel htmlFor='firstName'>{formData.firstName.label}</FormLabel>
+               <InputData placeholder={formData.firstName.placeholder} id='firstName' required/>
+            </InputContainer>
+            <InputContainer>
+               <FormLabel htmlFor='lastName'>{formData.lastName.label}</FormLabel>
+               <InputData placeholder={formData.lastName.placeholder} id='lastName' required/>
+            </InputContainer>
+         </InputNamesContainer>
+         <InputContainer>
+            <FormLabel htmlFor='email'>{formData.email.label}</FormLabel>
+            <InputData placeholder={formData.email.placeholder} id='email' type='email' required/>
+         </InputContainer>
+         <InputContainer>
+            <FormLabel htmlFor='message'>{formData.message.label}</FormLabel>
+            <InputMessage placeholder={formData.message.placeholder} id='message' required/>
+         </InputContainer>
+         <InputRadioContainer>
+            <InputRadio type='radio' id='radio' required/>
+            <FormRadioLabel htmlFor='radio'>{formData.radio.label}</FormRadioLabel>
+         </InputRadioContainer>
          <ButtonSubmit>{formData.buttonText}</ButtonSubmit>
       </FormContainer>
    )
