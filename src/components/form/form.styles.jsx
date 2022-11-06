@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const FormContainer = styled.form`
    padding: 10rem 39.5rem;
    border-bottom: 1px solid #e6e5e5;
+
+   @media only screen and (max-width: 56.25em) {
+      padding: 10rem 3rem;
+   }
 `
 
 export const FormHeader = styled.h2`
